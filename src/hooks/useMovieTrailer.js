@@ -1,10 +1,11 @@
 import { API_OPTIONS } from "../utils/Constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNowPlayingVideo } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 const useMovieTrailer=(movieId)=>{
     const dispatch=useDispatch();
+    const movietrailer = useSelector((store)=>store.movies.trailerVideo)
     const getMovieVideos= async ()=>{
         const data = await fetch("https://api.themoviedb.org/3/movie/"+movieId+"/videos?language=en-US",API_OPTIONS);
         const json = await data.json();
@@ -16,7 +17,7 @@ const useMovieTrailer=(movieId)=>{
         
     }
     useEffect(()=>{
-        getMovieVideos();
+       !movietrailer && getMovieVideos();  //called memoization if already data is present it will not call again
         
     },[])
    

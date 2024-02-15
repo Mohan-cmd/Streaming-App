@@ -6,6 +6,16 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMjRiOWU0MWQ3NDQxOTg0NTU5YzBlZDZmODhiYmVhYSIsInN1YiI6IjY1Yzg5OGMwYWFlYzcxMDE2MjU5MTU0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tHujPYHjRSl7PPVCAidpEuPRYx8QHxeO3ETet6WNhnw'
+      Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
     }
   };
+
+export const Supported_LANGUAGES=[
+    {identifier:"en" ,name:"English"},
+    {identifier:"hindi", name:"Hindi"},
+    {identifier:"spanish",name:"Spanish"}
+] ;
+
+export const OPENAI_KEY= process.env.REACT_APP_OPENAI_KEY ;
+
+export const MOVIE_API="https://api.themoviedb.org/3/search/movie?query="

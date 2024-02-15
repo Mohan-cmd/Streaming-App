@@ -71,11 +71,11 @@ const Login =()=>{
     <div>
      <div>
        <Header/>
-       <div className="absolute">
-         <img src={HOME_PAGE_IMG}></img>
+       <div className="absolute ">
+         <img className="h-screen object-cover" src={HOME_PAGE_IMG}></img>
         </div>
     
-        <form onSubmit={(e)=>e.preventDefault()} className="absolute py-10 px-10 bg-black bg-opacity-80 w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-sm">
+        <form onSubmit={(e)=>e.preventDefault()} className="absolute py-10 px-10 bg-black bg-opacity-80 md:w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-sm">
             <div className="flex-row">
             <h1 className="m-2">{isSignIn? "Sign In" : "Sign Up"}</h1> 
             {!isSignIn && <input className="p-2 my-2 w-full bg-gray-700" placeholder="Full name"></input>}

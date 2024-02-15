@@ -12,7 +12,7 @@ const SecondaryContainer =()=>{
 
    return(
     <div className="bg-black">
-    <div className="-mt-52 relative z-2">
+    <div className="mt-0 md:-mt-52 relative z-2">
     { movies&& <MovieList movieList={movies} type={"Popular Movies"}/>}
      { trendingMovies &&<MovieList movieList={trendingMovies} type={"Top Rated Movies"}/>}
      {upcomingMovies && <MovieList movieList={upcomingMovies} type={"Upcoming Movies"}/>}

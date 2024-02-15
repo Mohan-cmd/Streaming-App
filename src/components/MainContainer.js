@@ -9,7 +9,7 @@ const MainContainer =()=>{
     const {original_title,overview,id}=mainMovie
     console.log(mainMovie)
     return(
-    <div>
+    <div className="md:p-0 pt-[25%]">
         <VideoTitle title={original_title} overview={overview} />
         <VideoContainer movieId={id}/>
     </div>
